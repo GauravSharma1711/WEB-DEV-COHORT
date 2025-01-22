@@ -104,7 +104,7 @@ nav button{
 .line{
     height: 225px;
     position: absolute;
-    /* opacity: 1; */
+   
  background-color: rgb(71, 38, 169); 
   border-top: 5px solid red;
   border-bottom: black;
@@ -113,15 +113,15 @@ nav button{
     width: 95vw;
     margin: auto;
     background: 
-   linear-gradient(to top, rgb(6, 8, 12) 80%, rgb(20, 10, 210) 100%),
-    linear-gradient(to bottom, rgb(7, 78, 232) 0%, rgba(129, 135, 195, 0.8) 100%);
+   linear-gradient(to top, rgb(1, 1, 31) 80%, rgb(20, 10, 210) 100%),
+    linear-gradient(to bottom, rgb(7, 78, 232) 0%, rgba(15, 18, 43, 0.8) 100%);
  
     overflow: hidden;
 }
  .input2{
     position: relative;
     z-index: 1;
-   
+   background-color: black;
      bottom: 0; 
      margin-top: 10%;
     padding:23px;
