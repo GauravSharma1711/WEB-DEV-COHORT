@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+body{
+    background-color: rgb(28, 27, 44);
+}
+.main{
+    height: 80vh;
+    width: 100%;
+   background-image: url("./assets/bg.jpg");
+   background-size: cover;
+   background-position: center;
+    position: relative;
+    
+}
+.main .box{
+    position: absolute;
+    top: 0;
+    /* height: 80vh; */
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.45;
+}
+.nav{
+    
+    height: 62px;
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav img{
+    width: 134px;
+    height: 134px;
+    position: relative;
+    z-index: 1;
+}
+nav button{
+    position: relative;
+    z-index: 1;
+}
+.hero{
+    font-family: "Roboto", serif;
+    position: relative;
+    height:88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 34px;
+  gap: 23px;
+  padding: 0 30px;
+  background: linear-gradient(to bottom, rgba(5, 5, 7, 0) 80%, rgb(0, 0, 53) 100%);
+
+}
+
+
+.hero> :nth-child(1){
+    font-weight: 900;
+    font-size: 46px;
+    text-align: center;
+   
+}
+.hero> :nth-child(2){
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+.box2{
+    position: absolute;
+   
+    height: 30vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+ 
+ 
+}
+
+.line{
+    height: 225px;
+    position: absolute;
+    /* opacity: 1; */
+ background-color: rgb(71, 38, 169); 
+  border-top: 5px solid red;
+  border-bottom: black;
+  border-bottom: none;
+    border-radius:50%;
+    width: 95vw;
+    margin: auto;
+    background: 
+   linear-gradient(to top, rgb(6, 8, 12) 80%, rgb(20, 10, 210) 100%),
+    linear-gradient(to bottom, rgb(7, 78, 232) 0%, rgba(129, 135, 195, 0.8) 100%);
+ 
+    overflow: hidden;
+}
+ .input2{
+    position: relative;
+    z-index: 1;
+   
+     bottom: 0; 
+     margin-top: 10%;
+    padding:23px;
+    margin-bottom: 39px;
+} 
+
+.lineinput {
+    position: absolute;
+    z-index: 1;
+
+  margin-right: 13px;
+  margin-top: 12px;
+} 
+
+.images{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 80vw;
+    margin-top: 20px;
+}
+.images span{
+    margin: 8px;
+}
+
+#card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+#card h1{
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+}
+.cardd{
+    display: flex;
+  flex-wrap: nowrap;
+}
+.cards{
+    padding: 3%;
+    color: white;
+     margin: 8px;
+     height: 330px;
+     width: 650px;
+     border-radius: 30px;
+     border: 2px solid rgb(236, 9, 9);
+}
+.cards h2{
+    font: bolder;
+    font-size: 22px;
+    margin-bottom: 12px;
+
+}
+
+.input3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+}
+.input3 h3{
+color: white;
+margin: 12px;
+font-weight: 900;
+font-size: 23px;
+}
+
+.input33{
+    display:flex;
+    width: 60vw;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+}
+.input33 input{
+ padding: 19px 163px;
+ text-align: center;
+ font-size: 18px;
+ font-weight: bold;
+ background-color: transparent;
+    border: 1px solid rgb(248, 248, 248);
+}
+.input33 button{
+    margin-left: 4px;
+    padding: 6px 63px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    background-color: red;
+}
+
+.final{
+    display: flex;
+    flex-direction: column;
+    margin: 23px;
+    justify-content: space-between;
+}
+.final p{
+ font-weight: 700;
+ font-size: 12px;
+ color: white;
+ margin-left: 48px;
+ margin-bottom: 6px;
+}
+
+.final h3{
+    color: white;
+    font-weight: bolder;
+    font-size: 12px;
+    margin-left: 48px
+}
+
+
+.navbutton{
+    padding: 23px;
+
+}
+#lang{
+    padding: 4px 22px;
+    border-radius: 4px;
+    border: none;
+}
+#signup{
+    border: none;
+    border-radius: 4px;
+    margin-left: 4px;
+    padding: 4px 22px;
+color: white;
+background-color: red;
+}
+
+.herobutton{
+    padding: 23px 63px;
+}
+#emailinput{
+    background-color: transparent;
+    border: 1px solid rgb(248, 248, 248);
+padding: 15px 75px;
+border-radius: 4px;
+
+   
+}
+#getstarted{
+    padding: 15px 35px;
+    border-radius: 4px;
+    margin-left: 4px;
+    color: white;
+background-color: red;
+}
+
+input::placeholder {
+    font-weight: 900;
+    color: rgb(245, 242, 242); 
+}
