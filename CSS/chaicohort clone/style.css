@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+.nav1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    padding: 4px;
+}
+.nav1 h4{
+   margin-left: 4px;
+   margin-right: 4px;
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    background-color: black;
+    padding: 6px;
+}
+.nav2 a{
+    color: white;
+    text-decoration: none;
+}
+
+/* --------- hero sec starts------- */
+.hero{
+    position: relative;
+    height: 80em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+.herobg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+  }
+  .herobg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .herocontent {
+    position: absolute;
+    text-align: center;
+    top: 40px;
+    z-index: 1;
+    max-width: 900px;
+    padding: 70px;
+
+  }
+  .herocontent h1 {
+    margin: 30px 0;
+    font-size: 38px;
+  }
+  .herocontent p {
+    margin: 30px 0;
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  .herobtn button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0, 220, 249);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #learn{
+    background-color: white;
+    color: black;
+  }
+  #firstbtn{
+    padding: 8px;
+    border-radius: 18px;
+    cursor: pointer;
+    background-color: rgb(70, 70, 186);
+    color: white;
+    border: 2px solid blue;
+  }
+  .video {
+    position: relative;
+    z-index: 2;
+    margin-top: 500px;
+    border: 4px solid blue;
+    border-radius: 20px;
+  }
+  
+  .video iframe {
+   
+    width: 1000px;
+    height: 650px;
+   
+    border-radius: 20px;
+  }
+
+  /* ---------------hero complete-------------- */
+  .trustedsection{
+ 
+    padding: 30px;
+   color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(to top left, rgb(1, 1, 97) 5%, black 95%);
+
+  }
+  .leftside{
+    margin-right: 23px;
+  }
+  .leftsidediv{
+    border: 2px solid rgb(238, 238, 238);
+    padding: 40px 160px;
+    border-radius: 40px;
+    margin: 20px;
+    font-weight: 700;
+    font-size: 23px;
+  }
+
+  #rightsidebtn1{
+    padding: 6px 10px;
+    border-radius: 12px;
+    margin: 12px;
+    border: 2px solid rgb(6, 6, 130);
+    color: blue;
+    background-color: rgb(129, 125, 125);
+  }
+  .rightside h1{
+    font-weight: 900;
+    font-size: 33px;
+    padding: 18px 10px;
+  }
+  .rightside p{
+    font-weight: 600;
+    font-size: 23px;
+    padding: 18px 10px;
+  }
+  .trustedbtn button{
+    padding: 16px 23px;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+  border: none;
+  }
+
+  /* -----------------cohort sec----------------- */
+
+  .cohort{
+
+display: flex;
+
+align-items: center;
+justify-content: space-evenly;
+color: white;
+background: linear-gradient(to bottom left, rgb(1, 1, 102) 5%, black 95%);
+
+  }
+  .cohortleft{
+    margin-top: 20px;
+    margin-left: 20px;
+
+  }
+  .cohortleftbtn1{
+   border: 2px solid rgb(71, 0, 236);
+   padding: 14px 53px;
+   border-radius: 30px;
+   font-weight: bold;
+   background-color: rgb(18, 12, 75);
+   color: white;
+  } 
+  .cohortleft h1{
+    margin: 9px;
+    padding: 8px;
+    font-weight: 900;
+    font-size: 26px;
+    color: white;
+  }
+  .cohortleft p{
+    margin: 9px;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+  }
+  .cohortleftbtn2 button{
+    margin: 9px;
+    padding: 8px;
+    padding: 10px 33px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 10px;
+
+  }
+  .cohortright{
+    margin: 20px 40px;
+  }
+  .cohortright img{
+    border-radius: 30px;
+  }
+
+  /* --------------courses--------------------- */
+  .courses{
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+  }
+  .coursestop{
+    /* background-color: red; */
+    margin-left: 50px;
+    padding: 23px;
+  }
+  .coursestop button{
+    padding: 10px 16px;
+    border-radius: 30px;
+    background-color: rgb(160, 160, 212);
+    color: rgb(0, 0, 255);
+    border: 2px solid blue ;
+    font-weight: bold;
+    margin: 12px;
+  }
+  .coursestop h1{
+    margin: 12px;
+    font-size: 43px;
+  } 
+  .coursestop p {
+    margin: 12px;
+    font-size: 13px;
+  }
+
+  #coursesdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  }
+
+  .courseseachdiv{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+    padding: 23px;
+    margin: 24px;
+    background-color: rgb(7, 4, 43);
+    border-radius: 20px;
+     
+  }
+
+  /* .courseseachdiv img{
+    width: 230px;
+    height: 103px;
+    margin: 8px;
+  } */
+  .courseseachdiv h3{
+    margin: 16px;
+    font-size: 32px;
+  }
+  .courseseachdiv p{
+    margin: 9px;
+    color: white;
+    font-weight: 500;
+  }
+
+  .courseseachdiv h5{
+    margin: 9px;
+  }
+
+  .coursesbtn{
+    display: flex;
+    padding: 14px;
+  }
+  .coursesbtn button{
+    margin: 12px;
+    padding: 10px 22px;
+    border-radius: 10px;
+  }
+
+  /* ------------------------ courses section complete-------------------------------- */
+
+
+  
