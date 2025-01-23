@@ -300,4 +300,104 @@ justify-content: flex-start;
   /* ------------------------ courses section complete-------------------------------- */
 
 
-  
+  /*------------------------ coding hero src starts-------------- */
+
+  .codinghero{
+margin: 12px;
+/* background-color: red; */
+
+width: full;
+  }
+
+  .codingherotop{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 33px;
+margin: 23px;
+  }
+
+  .codingherotop img{
+    margin: 16px 13px;
+  }
+  .codingherotop button{
+    margin: 5px 13px;
+    padding: 8px 23px;
+    border-radius: 12px;
+    border: 1 px solid blue;
+    color: rgb(0, 0, 233);
+    background-color: rgb(16, 16, 77);
+    font-weight: 700;
+  }
+  .codingherotop h1{
+    margin: 5px 13px;
+    font-weight: 400;
+    font-size: 53px;
+    color: white;
+  }
+  .codingherotop p{
+    margin: 5px 13px;
+    padding: 23px 43px;
+    font-size: 18px;
+    color: white;
+  }
+
+  .codingherocardss{
+   
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4;
+    color: white;
+    width: 80vw;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .codingherocard{
+border: 2px solid black;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+padding: 13px 15px;
+margin: 8px;
+border-radius: 17px;
+color: white;
+background-color: rgb(12, 0, 52);
+  }
+  .codingherocard:hover{
+    transform: scale(1.05); 
+  }
+  .codingherocard img{
+    margin-bottom: 12px;
+  }
+  .codingherocard h4{
+    margin-bottom: 12px;
+  }
+  .codingherolast{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 32px;
+  }
+  .codingherolast p{
+    padding: 16px;
+    margin: 32px;
+    color: white;
+    background-color: rgb(6, 178, 236);
+    width: 23vw;
+    margin: auto;
+    border-radius: 14px;
+  }
+  .codingherolast button{
+    margin: 25px 13px;
+    padding: 14px 43px;
+    border-radius: 12px;
+    border: 1 px solid blue;
+    color: white;
+    background-color: rgb(16, 16, 77);
+    font-weight: 700;
+  }
+  /* ------coding hero section complete */
