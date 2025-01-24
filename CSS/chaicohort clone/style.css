@@ -416,6 +416,7 @@ background-color: rgb(12, 0, 52);
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+   
   }
   .texture{
     position: absolute;
@@ -443,6 +444,7 @@ background-color: rgb(12, 0, 52);
     margin: 2px;
     padding: 3px;
     font-size: 23px;
+    line-height: 22px;
     color: white;
     line-height: 1.5; 
   }
@@ -462,3 +464,174 @@ height: auto;
 width: 40%;
   }
   /*----------- shirt sec complete-------- */
+
+/* ------------  api section -------- */
+
+.api{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 33px 0px;
+}
+.apicontent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#apibtn1{
+  margin: 5px 13px;
+  padding: 8px 23px;
+  border-radius: 12px;
+  border: 1 px solid blue;
+  color: rgb(0, 0, 233);
+  background-color: rgb(16, 16, 77);
+  font-weight: 700;
+}
+.apicontent h1{
+  margin: 5px 13px;
+  font-weight: 400;
+  font-size: 53px;
+  color: white;
+}
+.apicontent p{
+  margin: 5px 13px;
+  padding: 23px 43px;
+  font-size: 15px;
+  line-height: 22px;
+  color: white;
+}
+.apibtn2 button{
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(0, 220, 249);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apicontent img{
+  height: 83vh;
+  width: 70vw;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  border-top: 7px solid lightskyblue;
+  border-left: 7px solid lightskyblue;
+  border-right: 7px solid lightskyblue;
+  margin-top: 8px;
+  margin-bottom: 52px;
+}
+
+.apicontent2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 22px;
+}
+
+.apicontent2 button{
+  margin: 5px 13px;
+  padding: 8px 23px;
+  border-radius: 12px;
+  border: 1 px solid blue;
+  color: rgb(0, 0, 233);
+  background-color: rgb(16, 16, 77);
+  font-weight: 700;
+}
+.apicontent2 h1{
+  margin: 5px 13px;
+  font-weight: 400;
+  font-size: 53px;
+  color: white;
+}
+.apicontent2 p{
+  margin: 5px 13px;
+  padding: 23px 43px;
+  font-size: 15px;
+  line-height: 22px;
+  color: white;
+}
+
+.apicontent2 img{
+  height: 63vh;
+  width: 50vw;
+  
+  margin-top: 8px;
+  margin-bottom: 52px;
+}
+
+/* -----------------footer section---------------------------- */
+
+.footer{
+  /* background-color: red; */
+  border-top: 2px solid blue;
+  border-left: 2px solid blue;
+  border-right: 2px solid blue;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.topfooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.topfooter1{
+   padding: 23px;
+   margin: 12px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+.footera{
+  display: flex;
+
+}
+.topfooter1 img{
+  height: 23px;
+  width: 23px;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.topfooter1 p{
+  margin: 8px;
+  font-size: 13px;
+  line-height: 17px;
+}
+.topfooter2{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.topfooter2 div{
+   display:  flex;
+   flex-direction: column;
+   padding: 12px;
+   margin: 12px;
+   align-items: center;
+   justify-content: center;
+}
+.topfooter2  a{
+   margin: 6px;
+   color: white;
+   text-decoration: none;
+}
+.footerend{
+  display: flex;
+  height: 123px;
+  margin-top: 23px;
+  font-weight: bold;
+  font-size: 164px;
+  line-height: 90px;
+  color: blue;
+  background: linear-gradient(to top, black, rgb(0, 47, 134) 95%);
+}
