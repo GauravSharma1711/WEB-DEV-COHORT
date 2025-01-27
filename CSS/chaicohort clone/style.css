@@ -129,12 +129,14 @@ html,body{
     margin-right: 23px;
   }
   .leftsidediv{
-    border: 2px solid rgb(238, 238, 238);
-    padding: 40px 160px;
+   border: none;
+    padding: 30px 120px;
     border-radius: 40px;
     margin: 20px;
     font-weight: 700;
     font-size: 23px;
+    background: linear-gradient(to left top, rgb(23, 23, 207) 20% , rgb(16, 19, 17) 30%);
+
   }
 
   #rightsidebtn1{

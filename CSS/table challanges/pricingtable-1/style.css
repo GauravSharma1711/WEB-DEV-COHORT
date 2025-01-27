@@ -1,0 +1,139 @@
+/* Challenge CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    
+  }
+  
+  .container {
+    /* Add your styles here */
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  h1 {
+    /* Add your styles here */
+    font-weight: 500;
+    font-size: 37px;
+    
+  }
+  
+  .pricing-heading {
+    /* Add your styles here */
+
+
+  }
+  
+  .pricing-container {
+    /* Add your styles here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+   
+    
+  }
+  
+  .pricing-card {
+    /* Add your styles here */
+    width: 310px;
+    margin-left: 50px;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 15px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 14px 12px rgba(0, 0, 0, 0.2); 
+   
+  }
+  
+  .pricing-card:hover {
+    /* Add your styles here */
+    transform: translateY(-5px); 
+    
+  }
+  
+  .pricing-card.popular {
+    /* Add your styles here */
+    
+    border: 3px solid orange;
+    position: relative;
+    
+
+  }
+  
+  .popular-badge {
+    /* Add your styles here */
+    color: white;
+    background-color: darkorange;
+    padding: 8px;
+    border-radius: 20px;
+    position: absolute;
+    top: -20px;
+    
+  }
+  
+  .price {
+    /* Add your styles here */
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 2px;
+ 
+
+  }
+  
+  .period {
+    /* Add your styles here */
+    color: grey;
+    font-weight: 600;
+  
+  }
+  
+  .features {
+    /* Add your styles here */
+    
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    
+  }
+  
+  .features li {
+    /* Add your styles here */
+    
+    font-weight: 500;
+
+  }
+  
+  .subscribe-btn {
+    /* Add your styles here */
+  
+    padding: 10px 40px;
+    border-radius: 20px;
+    color: white;
+    background-color:darkorange;
+  }
+  
+  .subscribe-btn:hover {
+    /* Add your styles here */
+    cursor: pointer;
+  
+  }
+  
