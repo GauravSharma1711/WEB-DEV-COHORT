@@ -85,6 +85,7 @@ console.log(result1);
    
 // }
 // // objfun(user)
+
 // objfun({
 //     name:"john",
 //     city:"london"
