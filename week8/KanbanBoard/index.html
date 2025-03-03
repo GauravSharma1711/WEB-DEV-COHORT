@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanBan Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+
+
+        <div id="todo-board" class="board">
+
+             <div class="board-upper">
+                <div class="board-upper-one">
+                    <h4>Todo</h4>
+                    <div class="item-counter">4</div>
+                </div>
+                <div class="board-upper-two">
+                    <button class="board-delete-btn" >Delete</button>
+
+                </div>
+             </div>
+
+
+            <div id="todo-items" class="items">
+                 <div class="item">
+                    <div class="item-upper">
+                        <div class="item-date">4 Mar 2025</div>
+                        <div item-btn>
+                            <button class="item-delete">❌</button>
+                            <button class="item-edit">✏️</button>
+                        </div>
+                    </div>
+                    <div class="item-lower">
+                        <p class="item-name">Learn Backend</p>
+                        <p class="item-description">Learn backend in march</p>
+                    </div>
+                    </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div id="progress-board" class="board">
+<h4>In Progress</h4>
+        </div>
+        <div id="completed-board" class="board">
+<h4>Completed</h4>
+        </div>
+
+        
+    </div>
+    <button id="add-task"  class="final-button">AddTask</button>
+    <button id="add-board" class="final-button">AddBoard</button>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
