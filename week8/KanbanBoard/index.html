@@ -27,7 +27,7 @@
 
 
             <div id="todo-items" class="items">
-                 <div class="item">
+                 <div class="item" draggable="true">
                     <div class="item-upper">
                         <div class="item-date">4 Mar 2025</div>
                         <div item-btn>
@@ -40,6 +40,20 @@
                         <p class="item-description">Learn backend in march</p>
                     </div>
                     </div>
+
+                    <div class="item" draggable="true">
+                        <div class="item-upper">
+                            <div class="item-date">4 Mar 2025</div>
+                            <div item-btn>
+                                <button class="item-delete">❌</button>
+                                <button class="item-edit">✏️</button>
+                            </div>
+                        </div>
+                        <div class="item-lower">
+                            <p class="item-name">Learn React</p>
+                            <p class="item-description">Learn React in march</p>
+                        </div>
+                        </div>
             </div>
 
 
@@ -50,10 +64,42 @@
 
 
         <div id="progress-board" class="board">
-<h4>In Progress</h4>
+            <div class="board-upper">
+                <div class="board-upper-one">
+                    <h4>Peogress</h4>
+                    <div class="item-counter">(0)</div>
+                </div>
+                <div class="board-upper-two">
+                    <button class="board-delete-btn" >Delete</button>
+
+                </div>
+             </div>
+
+             <div id="progress-items" class="items">
+           </div>
         </div>
+
+
+
+
+
+
+
         <div id="completed-board" class="board">
-<h4>Completed</h4>
+            <div class="board-upper">
+                <div class="board-upper-one">
+                    <h4>Completed</h4>
+                    <div class="item-counter">(0)</div>
+                </div>
+                <div class="board-upper-two">
+                    <button class="board-delete-btn" >Delete</button>
+
+                </div>
+             </div>
+
+             <div id="progress-items" class="items">
+            </div>
+
         </div>
 
         

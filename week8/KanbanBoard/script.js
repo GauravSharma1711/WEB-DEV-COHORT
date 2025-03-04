@@ -20,7 +20,7 @@ addBoard.addEventListener('click',()=>{
 
 
     nameHere.innerText = name;
-    countItem.innerText = `(${cardItems.querySelectorAll("p").length})`;
+    countItem.innerText = `(${cardItems.querySelectorAll('.item').length})`;
     delBtn.innerText = "Delete";
 
     board.classList.add('board');
@@ -46,15 +46,14 @@ addBoard.addEventListener('click',()=>{
     board.remove();
   })
 
-
+  
+ boardCapture(board,cardItems);
 
 
 })
 
 
 // for adding card
-
-
 addTaskBtn.addEventListener('click',()=>{
     let task = prompt('Enter the task');
     if(task==""){
@@ -87,6 +86,7 @@ const itemDescription = document.createElement('p');
 
 
 itemName.textContent = task;
+item.setAttribute("draggable",true);
 itemDescription.textContent = description;
 itemDelete.innerText="❌"
 itemEdit.innerText="✏️"
@@ -114,6 +114,7 @@ itemLower.appendChild(itemDescription)
 todoBoard.appendChild(item);
 
 
+
 itemDelete.addEventListener('click',()=>{
    item.remove();
 })
@@ -137,9 +138,27 @@ itemEdit.addEventListener('click', () => {
 });
 
 
+attach(item);
+
+
 
 })
 
+
+//stick card to board
+const allBoard = document.querySelectorAll('.board');
+allBoard.forEach((board)=>{
+    let itemsdiv = board.querySelector('.items');
+    boardCapture(board,itemsdiv);
+  
+})
+
+
+const allItems = document.querySelectorAll('.item');
+allItems.forEach((item)=>{
+   attach(item);
+
+})
 
 function getDate(){
     const date = new Date(); 
@@ -149,7 +168,33 @@ const month = date.toLocaleString('en-US', { month: 'short' });
 const year = date.getFullYear(); 
 
 const formattedDate = `${day} ${month} ${year}`;
-console.log(formattedDate); 
 return formattedDate
 
+}
+
+
+function attach(target){
+    target.addEventListener('dragstart',()=>{
+        target.classList.add('flying')
+    })
+    
+    target.addEventListener('dragend',()=>{
+        target.classList.remove('flying')
+    })
+    
+}
+
+function boardCapture(board,boardSecondDiv){
+    board.addEventListener('dragover',()=>{
+        const flyingElement = document.querySelector('.flying');
+        boardSecondDiv.appendChild(flyingElement);
+        updatecounter(board)
+         
+     })
+}
+
+function updatecounter(board){
+    const countItem = board.querySelector('.item-counter'); 
+    const cardItems = board.querySelector('.items'); 
+    countItem.innerText = `(${cardItems.querySelectorAll('.item').length})`;
 }
