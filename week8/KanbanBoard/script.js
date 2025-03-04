@@ -1,9 +1,36 @@
+
 // for adding board
 const container = document.querySelector('.container')
 const todoBoard = document.getElementById('todo-board');
+const progressBoard = document.getElementById('progress-board');
+const completedBoard = document.getElementById('completed-board');
 const addTaskBtn = document.getElementById('add-task');
 const items = document.getElementById('todo-items')
+const item = document.querySelector('.item')
+const itemCounter = document.querySelector('.item-counter');
 const addBoard = document.getElementById('add-board');
+const todoDelete = document.getElementById('todo-delete')
+const progressDelete = document.getElementById('progress-delete')
+const completedDelete = document.getElementById('completed-delete')
+const itemEdit=  document.querySelector('.item-edit')
+const itemDelete = document.querySelector('.item-delete')
+const nameitem = document.querySelector('.item-name')
+const descitem  = document.querySelector('.item-description')
+
+
+updatecounter(todoBoard);
+
+itemDelete.addEventListener('click',()=>{
+    item.remove();
+    updatecounter(todoBoard)
+})
+itemEdit.addEventListener('click',()=>{
+    const name = prompt("Enter name",nameitem.textContent );
+    const description = prompt("Enter Description",descitem.textContent );
+
+    nameitem.textContent = name;
+    descitem.textContent  = description;
+})
 
 addBoard.addEventListener('click',()=>{
 
@@ -55,6 +82,7 @@ addBoard.addEventListener('click',()=>{
 
 // for adding card
 addTaskBtn.addEventListener('click',()=>{
+
     let task = prompt('Enter the task');
     if(task==""){
         alert("Please enter task first");
@@ -111,12 +139,14 @@ itemBtn.appendChild(itemDelete)
 itemLower.appendChild(itemName)
 itemLower.appendChild(itemDescription)
 
-todoBoard.appendChild(item);
 
+items.appendChild(item);
+updatecounter(todoBoard)
 
 
 itemDelete.addEventListener('click',()=>{
    item.remove();
+   updatecounter(todoBoard)
 })
 
 itemEdit.addEventListener('click', () => {
@@ -142,6 +172,8 @@ attach(item);
 
 
 
+
+
 })
 
 
@@ -150,7 +182,7 @@ const allBoard = document.querySelectorAll('.board');
 allBoard.forEach((board)=>{
     let itemsdiv = board.querySelector('.items');
     boardCapture(board,itemsdiv);
-  
+  updatecounter(board);
 })
 
 
@@ -174,13 +206,19 @@ return formattedDate
 
 
 function attach(target){
+    let prevBoard= null;
     target.addEventListener('dragstart',()=>{
         target.classList.add('flying')
+        prevBoard = target.closest('.board');
     })
     
     target.addEventListener('dragend',()=>{
         target.classList.remove('flying')
+        const newBoard = target.closest('.board');
+        if (prevBoard) updatecounter(prevBoard); 
+        if (newBoard) updatecounter(newBoard); 
     })
+  
     
 }
 
@@ -198,3 +236,21 @@ function updatecounter(board){
     const cardItems = board.querySelector('.items'); 
     countItem.innerText = `(${cardItems.querySelectorAll('.item').length})`;
 }
+
+
+todoDelete.addEventListener('click',()=>{
+    todoBoard.remove();
+})
+
+progressDelete.addEventListener('click',()=>{
+    progressBoard.remove();
+    updatecounter(progressBoard)
+})
+
+completedDelete.addEventListener('click',()=>{
+    completedBoard.remove();
+    updatecounter(completedBoard)
+})
+
+
+
