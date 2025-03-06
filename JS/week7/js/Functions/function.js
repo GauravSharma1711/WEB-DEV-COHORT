@@ -24,3 +24,52 @@ person1.greet.call({name:"john"})   // hello john   (Context pass karte ha har b
 
 
  // Apply -> apply is similar to call but takes arguments as an array
+
+//  --------------------------------------------------------------------------------
+
+const person3 = {
+    name:"tommy",
+    greet:function(){
+        console.log(`hello ${this.name}`);
+        
+    }
+}
+
+console.log("hi");
+person3.greet();
+console.log("bye");
+// output 
+// hi
+// hello tommy
+// bye
+
+// -- but---
+const person4 = {
+    name:"tony",
+    greet:function(){
+        console.log(`hello ${this.name}`);
+        
+    }
+}
+
+console.log("hi");
+setTimeout(
+    person4.greet , 2000);
+console.log("bye");
+// outout  hi ,  bye  , but no hello tony 
+
+// coz set time out is a browser fun when it returns through call back q  call stack removees all fun and CONTEXT  is lost  so we need to use call or bind
+
+const person5 = {
+    name:"tony",
+    greet:function(){
+        console.log(`hello ${this.name}`);
+        
+    }
+}
+
+console.log("hi");
+setTimeout(
+    person5.greet.bind(person5) , 2000);
+console.log("bye");
+//  now output will be  hi, bye, hello tony
