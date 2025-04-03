@@ -70,7 +70,7 @@ class Student {
     }
 }
 
-Student.prototype.name = "Prototype Name";
+
 
 
 const s1 = new Student("John");
