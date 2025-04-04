@@ -98,18 +98,6 @@ return {title:movie.title,ratings:avg.toFixed(2)};
 
 //    ==========================================================
 
-// const obj = {
-// name:"gaurav",
-// greet:function(){
-//   console.log(`hello ${this.name}`);
-//  return this.name;
-// }
-// }
-
-// console.log("hi gaurav");
-// // setTimeout(obj.greet, 5);
-// setTimeout(obj.greet.bind(obj), 5); // hello gaurav
-// console.log("bye");
 
 
 // ===========================================================================
@@ -263,3 +251,73 @@ const obj = {
 // };
 // obj.greet(); // ✅ Hello, gaurav
 // ➡️ Here, the arrow function inherits this from the outer normal function, which has the correct this = obj
+
+
+
+// ---------------------------HOISTING-------------------------------------
+
+// hoisting
+console.log(age1) // undefined
+var age1  = 23;
+
+console.log(age2) // cannot access age before initialization -reason(temporal dead zone)
+let age2  = 23;
+
+console.log(age3)  // cannot access age before initialization -reason(temporal dead zone)
+const age3 = 23;
+
+// // Hoisting happens
+// // let x; (but NOT initialized)
+
+// // Memory state: x = uninitialized (TDZ)
+
+// // Code runs:
+// console.log(x); // 💥 Can't use — still in TDZ
+// x = 10;         // ✅ Now initialized
+
+
+
+// ------------------------IN CASE OF FUNCTIONS---------------------------
+
+
+// 🟩 Case 1: Function Declaration ✅
+// js
+// Copy
+// Edit
+// sayHi(); // ✅ Works! Output: "Hi"
+
+// function sayHi() {
+//   console.log("Hi");
+// }
+// ➡️ This is called a function declaration
+// ➡️ It's fully hoisted — both the name and the function body
+// ➡️ So you can call it before it's defined
+
+// 🟨 Case 2: Function Expression (with const) ❌
+// js
+// Copy
+// Edit
+// greet(); // ❌ Error: Cannot access 'greet' before initialization
+
+// const greet = function () {
+//   console.log("Hello");
+// };
+// ➡️ This is a function expression assigned to a const variable
+// ➡️ Only the variable name (greet) is hoisted, not its value
+// ➡️ But const variables aren’t initialized until runtime
+// ➡️ So calling it before definition gives a ReferenceError
+
+// 🟥 Case 3: Arrow Function (with const) ❌
+// js
+// Copy
+// Edit
+// hi(); // ❌ Error: Cannot access 'hi' before initialization
+
+// const hi = () => {
+//   console.log("Hey!");
+// };
+// ➡️ Same as above — const is hoisted in name only
+// ➡️ The arrow function isn’t initialized yet
+// ➡️ So you get a ReferenceError
+
+
