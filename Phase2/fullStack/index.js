@@ -2,6 +2,9 @@ import express, { urlencoded } from "express"
 import dotenv from "dotenv"
 import cors from "cors"
 import db from "./utils/db.js";
+import userRoutes from './routes/user.routes.js'
+import cookieParser from "cookie-parser";
+
 
 dotenv.config();
 
@@ -16,19 +19,22 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
+app.use(cookieParser());
 
 const port = process.env.PORT || 3000;
 
-app.get("/",(req,res)=>{
-    res.send("Hello world");
-})
 
-app.get("/gaurav",(req,res)=>{
-    res.send("hello gaurav")
-})
+
+
+
 
 //connect to db
 db();
+
+
+//user routes
+app.use("/api/v1/users",userRoutes)
+
 
 
 app.listen(port,()=>{
