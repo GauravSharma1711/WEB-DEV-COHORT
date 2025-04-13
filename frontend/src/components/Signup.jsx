@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import apiClient from '../../service/apiClient.js'
+import { useNavigate } from 'react-router';
 const Signup = () => {
 
     const [name, setName] = useState('');
@@ -7,6 +8,11 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [loading , setLoading] = useState(false);
      const[error,setError] = useState('');
+
+
+     //navigation
+     const navigate = useNavigate();
+
 
    const  submitHandler = async(e)=>{
            e.preventDefault();
@@ -16,8 +22,19 @@ const Signup = () => {
            //make api call to backend with data
            //get res from backend
            //take action based on response
-
-
+           try {
+            console.log("trying to signup");
+ const data = await apiClient.signUp(name,email,password);
+ console.log("signup response:",data);
+ if(data.success){
+navigate('/login')
+ }else{
+    setError(data.message||'signup failed')
+ }
+  } catch (error) { }
+finally{
+    setLoading(false);
+}
 
      }
 
@@ -25,7 +42,7 @@ const Signup = () => {
     <div className='signup'>
   
   <h1>welcome to signup page</h1>
-
+{error && <div>Eoor:{error}</div> }
 <form  onSubmit={submitHandler}>
 
 <div>
