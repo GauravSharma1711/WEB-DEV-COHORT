@@ -60,4 +60,5 @@ newArr[-1] = 99;
 console.log(newArr); 
 console.log(arr);   
 //original array also gets manipulated
-
+// (as arr is stored in heap and target stores the address of original array)
+// to prevent this u can pass arr as [...arr] in function 
