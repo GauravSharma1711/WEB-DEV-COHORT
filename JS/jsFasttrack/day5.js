@@ -13,7 +13,13 @@ function pataNhi(fn,delay){
     };
 }
 
-pataNhi()
-pataNhi()
-pataNhi()
-pataNhi()
+function greet(name){
+    console.log(`hello ${name}`);
+    
+}
+
+
+const a = pataNhi(()=>greet("gaurav"),3000)
+a()
+a()
+a()
