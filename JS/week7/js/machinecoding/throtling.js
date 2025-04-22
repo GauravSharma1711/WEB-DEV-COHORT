@@ -12,7 +12,9 @@ const patanhi = (fn,delay)=>{
 
 myId = setTimeout(() => {
     myId=null
-}, delay); }
+}, delay);
+
+}
         }
 }
 patanhi()
